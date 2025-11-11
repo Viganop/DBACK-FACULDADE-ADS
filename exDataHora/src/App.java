@@ -3,6 +3,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -41,6 +42,14 @@ public class App {
         int d21 = d05.getMinute();
         int d22 = d05.getSecond();
 
+        //Operações de adição e subtração
+        LocalDate d23 = d04.minusDays(7);
+        LocalDate d24 = d04.plusDays(7);
+        LocalDateTime d25 = d05.minusDays(7);
+        LocalDateTime d26 = d05.plusDays(7);
+        Instant d27 = d06.minus(7, ChronoUnit.DAYS);
+        Instant d28 = d06.plus(7, ChronoUnit.DAYS);
+
         // Saidas
         System.out.println("d01 = " + d01);
         System.out.println("d02 = " + d02);
@@ -64,6 +73,12 @@ public class App {
         System.out.println("d20 = " + d20);
         System.out.println("d21 = " + d21);
         System.out.println("d22 = " + d22);
+        System.out.println("d23 = " + d23);
+        System.out.println("d24 = " + d24);
+        System.out.println("d25 = " + d25);
+        System.out.println("d26 = " + d26);
+        System.out.println("d27 = " + d27);
+        System.out.println("d28 = " + d28);
         
 
 
